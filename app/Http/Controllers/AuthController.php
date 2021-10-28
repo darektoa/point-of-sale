@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -33,5 +34,17 @@ class AuthController extends Controller
         ]);
 
         return redirect()->route('login.loginView');
+    }
+
+
+    public function login(Request $request) {
+        if(Auth::attempt([
+            'email' => $request->email,
+            'password' => $request->password
+        ])) {
+            dd('BERHASIL LOGIN');
+        }
+
+        return back();
     }
 }

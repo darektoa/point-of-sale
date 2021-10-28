@@ -24,8 +24,8 @@
                                     </div>
                                 @endif
 
-                                <form method="POST" action="" class="user">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <form method="POST" action="{{ route('login') }}" class="user">
+                                    @csrf
 
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user" name="email" placeholder="{{ __('E-Mail Address') }}" value="{{ old('email') }}" required autofocus>
