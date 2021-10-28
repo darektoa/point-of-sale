@@ -42,9 +42,15 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => $request->password
         ])) {
-            dd('BERHASIL LOGIN');
+            return redirect()->route('dashboard.index');
         }
 
         return back();
+    }
+
+
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('login.loginView');
     }
 }
