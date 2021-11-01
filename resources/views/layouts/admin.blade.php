@@ -31,10 +31,10 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+            <div class="sidebar-brand-icon">
+                <i class="fas fa-store-alt"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            <div class="sidebar-brand-text mx-3 bold">CASSEER</div>
         </a>
 
         <!-- Divider -->
@@ -47,18 +47,10 @@
                 <span>{{ __('Dashboard') }}</span></a>
         </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            {{ __('Settings') }}
-        </div>
-
         <!-- Nav Item - Profile -->
         <li class="nav-item">
             <a class="nav-link" href="{{ route('products.index') }}">
-                <i class="fas fa-fw fa-user"></i>
+                <i class="fas fa-fw fa-box"></i>
                 <span>{{ __('Products') }}</span>
             </a>
         </li>

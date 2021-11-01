@@ -96,9 +96,9 @@
 
           @foreach($products as $product)
 					<tr>
-            <td class="align-middle h6">{{ $product['name'] }}</td>
-						<td class="align-middle h6">{{ $product['price'] }}</td>
-						<td class="align-middle h6">{{ $product['created_at'] }}</td>
+            <td class="align-middle h6">{{ $product->name }}</td>
+						<td class="align-middle h6">{{ $product->price }}</td>
+						<td class="align-middle h6">{{ $product->created_at->format('d/m/y') }}</td>
 						<td class="align-middle h6" style="white-space: nowrap">
               <button class="btn btn-warning edit-product" data-product="{{ $product }}" data-toggle="modal" data-target="#editProductModal">
                 <i class="fas fa-edit"></i>
