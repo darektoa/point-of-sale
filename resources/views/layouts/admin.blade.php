@@ -57,7 +57,7 @@
 
         <!-- Nav Item - About -->
         <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ route('transactions.index') }}">
                 <i class="fas fa-fw fa-hands-helping"></i>
                 <span>{{ __('Transactions') }}</span>
             </a>
