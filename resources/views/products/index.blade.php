@@ -21,11 +21,15 @@
 					</tr>
 				</thead>
 				<tbody>
+
+          @foreach($products as $product)
 					<tr>
-						<td class="align-middle h6">Biskuat</td>
-						<td class="align-middle h6">10000</td>
-						<td class="align-middle h6">12/11/21</td>
+            <td class="align-middle h6">{{ $product['name'] }}</td>
+						<td class="align-middle h6">{{ $product['price'] }}</td>
+						<td class="align-middle h6">{{ $product['created_at'] }}</td>
           </tr>
+          @endforeach
+
 				</tbody>
 			</table>
 		</div>
