@@ -57,9 +57,9 @@
 
         <!-- Nav Item - Profile -->
         <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ route('products.index') }}">
                 <i class="fas fa-fw fa-user"></i>
-                <span>{{ __('Profile') }}</span>
+                <span>{{ __('Products') }}</span>
             </a>
         </li>
 
@@ -67,7 +67,7 @@
         <li class="nav-item">
             <a class="nav-link" href="">
                 <i class="fas fa-fw fa-hands-helping"></i>
-                <span>{{ __('About') }}</span>
+                <span>{{ __('Transactions') }}</span>
             </a>
         </li>
 
