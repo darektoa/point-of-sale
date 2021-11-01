@@ -54,6 +54,7 @@
 						<th>Name</th>
 						<th>Price</th>
 						<th>Created</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -63,6 +64,13 @@
             <td class="align-middle h6">{{ $product['name'] }}</td>
 						<td class="align-middle h6">{{ $product['price'] }}</td>
 						<td class="align-middle h6">{{ $product['created_at'] }}</td>
+						<td class="align-middle h6">
+              <form action="{{ route('products.destroy', [$product->id]) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger" type="submit"><i class="fas fa-trash"></i></button>
+              </form>
+            </td>
           </tr>
           @endforeach
 
