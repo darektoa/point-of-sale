@@ -16,6 +16,7 @@ class CreateTransactionProductsTable extends Migration
         Schema::create('transaction_products', function (Blueprint $table) {
             $table->id();
             $table->foreignId('transaction_id')->constrained();
+            $table->foreignId('product_id')->constrained();
             $table->smallInteger('quantity');
             $table->bigInteger('total_price');
             $table->timestamps();
