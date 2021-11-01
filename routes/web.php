@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\{
+    AuthController,
+    DashboardController,
+    ProductController,
+    TransactionController
+};
 
 Route::get('/', fn() => view('welcome'));
 
@@ -26,7 +29,7 @@ Route::middleware(['auth'])->group(function() {
 
 
     // TRANSACTIONS
-    // Route::prefix('/transactions')->name('transactions.')->group(function() {
-    //     Route::get('/', []);
-    // });
+    Route::prefix('/transactions')->name('transactions.')->group(function() {
+        Route::get('/', [TransactionController::class, 'index'])->name('index');
+    });
 });
