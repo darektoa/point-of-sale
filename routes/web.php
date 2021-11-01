@@ -15,8 +15,18 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
-    Route::put('/products/{productId}', [ProductController::class, 'update'])->name('products.update');
-    Route::delete('/products/{productId}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+    // PRODUCTS
+    Route::prefix('/products')->name('products.')->group(function() {
+        Route::get('/', [ProductController::class, 'index'])->name('index');
+        Route::post('/', [ProductController::class, 'store'])->name('store');
+        Route::put('/{productId}', [ProductController::class, 'update'])->name('update');
+        Route::delete('/{productId}', [ProductController::class, 'destroy'])->name('destroy');
+    });
+
+
+    // TRANSACTIONS
+    // Route::prefix('/transactions')->name('transactions.')->group(function() {
+    //     Route::get('/', []);
+    // });
 });
