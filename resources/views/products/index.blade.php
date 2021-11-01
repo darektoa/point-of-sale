@@ -4,7 +4,7 @@
 	<div class="card shadow mb-4">
 		<div class="card-header py-3 d-flex align-items-center">
 			<h6 class="m-0 mr-3 font-weight-bold text-primary">Product List</h6>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProductModal">Add Product</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProductModal"><i class="fas fa-plus mr-2"></i>Product</button>
 			<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" method="get"
 				action="">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search" name="keyword"
