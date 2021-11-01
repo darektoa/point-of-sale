@@ -16,4 +16,5 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 });
