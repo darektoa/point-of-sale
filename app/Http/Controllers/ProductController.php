@@ -29,4 +29,18 @@ class ProductController extends Controller
         if($product) $product->delete();
         return back();
     }
+
+
+    public function update(Request $request, $productId) {
+        $product = Product::find($productId);
+
+        if($productId) {
+            $product->update([
+                'name'  => $request->name,
+                'price' => $request->price
+            ]);
+        }
+
+        return back();
+    }
 }
